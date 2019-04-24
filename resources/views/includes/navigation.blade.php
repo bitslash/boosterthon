@@ -10,6 +10,9 @@
             <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('/') }}">View Ratings {!! Request::is('/') ? '<span class="sr-only">(current)</span>' : '' !!}</a>
             </li>
+            <li class="nav-item {{ Request::is('rate') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ url('rate') }}">Rate Fundraiser {!! Request::is('rate') ? '<span class="sr-only">(current)</span>' : '' !!}</a>
+            </li>
         </ul>
     </div>
 </nav>

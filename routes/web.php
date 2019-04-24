@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('pages/home');
 });
+
+Route::get('rate', function() {
+    return view('pages/rate');
+});
+
