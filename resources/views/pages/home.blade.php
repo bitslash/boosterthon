@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         @foreach ($reviews as $review)
-            <div class="col-xs-4">
+            <div class="col-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h1>{{ $review->fundraiser_name }}</h1>
