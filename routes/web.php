@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
-});
+Route::get('/', 'ReviewsController@index');
 
 Route::get('rate', function() {
     return view('pages/rate');
