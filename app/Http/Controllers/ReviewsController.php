@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Repositories\ReviewRepositoryInterface;
 use App\Repositories\FundraiserRepositoryInterface;
+use Illuminate\Http\Request;
 
 class ReviewsController extends Controller
 {
@@ -62,5 +63,11 @@ class ReviewsController extends Controller
         $fundraiser_name = $this->_fundraiser->getName($fundraiser_id);
         $reviews = $this->_review->get($fundraiser_id);
         return view('pages/list', ['fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
+    }
+
+    public function save(Request $request)
+    {
+        $id = 1;
+        return redirect('list/' . $id);
     }
 }

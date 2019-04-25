@@ -18,4 +18,22 @@ class RateTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    /**
+     * test that a post results in a redirect
+     *
+     * @return void
+     */
+    public function testRatePost()
+    {
+        $post = [
+            'rating' => 5,
+            'fundraiser_name' => 'InfoMart',
+            'reviewer_name' => 'James Watkins',
+            'reviewer_email' => 'james@bitslash.com'
+        ];
+        $response = $this->post('/rate', $post);
+
+        $response->assertStatus(302);
+    }
 }
