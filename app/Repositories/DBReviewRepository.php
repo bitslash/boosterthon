@@ -5,6 +5,7 @@ namespace App\Repositories;
 use Illuminate\Support\Facades\DB;
 use App\Repositories\ReviewRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class DBReviewRepository implements ReviewRepositoryInterface
 {
@@ -49,5 +50,16 @@ class DBReviewRepository implements ReviewRepositoryInterface
             ->get();
 
         return $reviews;
+    }
+
+    /**
+     * save a request
+     *
+     * @return int
+     */
+    public function save(Request $request)
+    {
+        $review = $this->_model::create($request->all());
+        return $review->id;
     }
 }

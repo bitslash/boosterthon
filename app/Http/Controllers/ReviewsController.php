@@ -65,9 +65,18 @@ class ReviewsController extends Controller
         return view('pages/list', ['fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
     }
 
+    /**
+     * save a fundraiser's rating
+     *
+     * @return Response
+     */
     public function save(Request $request)
     {
+        // temporary until we can autopopulate these fields
         $id = 1;
+        $request->merge(['fundraiser_id' => $id, 'rating' => '5']);
+
+        $this->_review->save($request);
         return redirect('list/' . $id);
     }
 }

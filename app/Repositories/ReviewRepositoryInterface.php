@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 interface ReviewRepositoryInterface
 {
@@ -28,4 +29,11 @@ interface ReviewRepositoryInterface
      * @return Results
      */
     public function all();
+
+    /**
+     * save a request
+     *
+     * @return int
+     */
+    public function save(Request $request);
 }

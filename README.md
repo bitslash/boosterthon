@@ -12,5 +12,6 @@ This was the first time I've ever used Laravel, so there was quite a learning cu
 * I did implement phpunit tests for everything, though there wasn't much to test on such a simple site.
 * I implemented a repository design pattern in order to keep the logic out of the controllers and for easier unit testing. Again, probably overkill for such a simple site.
 * I extended the native Eloquent models for data retrieval.
+* Due to time constraints, I did not implement error handling with exceptions, which is a really bad practice.
 
 I haven't uploaded the site to a server yet, but I will update this with the URL once I do.
