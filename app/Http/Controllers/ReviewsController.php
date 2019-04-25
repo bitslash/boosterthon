@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Repositories\ReviewRepositoryInterface;
+use App\Repositories\FundraiserRepositoryInterface;
 
 class ReviewsController extends Controller
 {
@@ -14,13 +15,19 @@ class ReviewsController extends Controller
     protected $_review;
 
     /**
+     * @var FundraiserRepositoryInterface
+     */
+    protected $_fundraiser;
+
+    /**
      * get the repository data model for review
      *
      * @param ReviewRepositoryInterface
      */
-    public function __construct(ReviewRepositoryInterface $review)
+    public function __construct(ReviewRepositoryInterface $review, FundraiserRepositoryInterface $fundraiser)
     {
         $this->_review = $review;
+        $this->_fundraiser = $fundraiser;
     }
 
     /**
@@ -52,17 +59,7 @@ class ReviewsController extends Controller
      */
     public function list(int $fundraiser_id)
     {
-        $fundraiser = DB::table('fundraisers')
-            ->select('fundraiser_name')
-            ->where('id', '=', $fundraiser_id)
-            ->get();
-
-        $fundraiser_name = '';
-        if (!$fundraiser->isEmpty())
-        {
-            $fundraiser_name = $fundraiser->first()->fundraiser_name;
-        }
-
+        $fundraiser_name = $this->_fundraiser->getName($fundraiser_id);
         $reviews = $this->_review->get($fundraiser_id);
         return view('pages/list', ['fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
     }

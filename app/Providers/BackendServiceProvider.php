@@ -17,5 +17,10 @@ class BackendServiceProvider extends ServiceProvider
             $model = new \App\Review();
             return new \App\Repositories\DBReviewRepository($model);
         });
+
+        $this->app->bind('App\Repositories\FundraiserRepositoryInterface', function() {
+            $model = new \App\Fundraiser();
+            return new \App\Repositories\DBFundraiserRepository($model);
+        });
     }
 }
