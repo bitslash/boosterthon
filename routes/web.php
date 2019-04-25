@@ -12,8 +12,6 @@
 */
 
 Route::get('/', 'ReviewsController@index');
-
-Route::get('rate', function() {
-    return view('pages/rate');
-});
+Route::get('/rate', 'ReviewsController@rate');
+Route::get('/list/{id}', 'ReviewsController@list');
 

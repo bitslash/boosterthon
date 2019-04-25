@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('styles')
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @stop
 @section('content')
     <div class="row">
@@ -20,6 +20,7 @@
                                 <i class="fa fa-star-o"></i>
                             @endif
                         @endfor
+                        <a href="{{ url('/list/' . $review->fundraiser_id) }}">({{ $review->num_rating }} Reviews)</a>
                     </div>
                 </div>
             </div>

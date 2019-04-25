@@ -1,0 +1,17 @@
+h1 {
+  padding-bottom: 30px;
+}
+
+div.reviews div.review {
+  padding-bottom: 15px;
+}
+
+div.reviews div.review span.rating,
+div.reviews div.review span.date {
+  width: 100px;
+}
+
+div.reviews div.review span.name {
+  width: 200px;
+}
+

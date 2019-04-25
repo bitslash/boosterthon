@@ -646,17 +646,29 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 
 /***/ }),
 
+/***/ "./resources/sass/list.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/list.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9saXN0LnNjc3M/NjgxOSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9zYXNzL2xpc3Quc2Nzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/list.scss\n");
+
+/***/ }),
+
 /***/ 0:
-/*!**********************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/default.scss ./resources/sass/home.scss ***!
-  \**********************************************************************************************************************/
+/*!*************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/default.scss ./resources/sass/home.scss ./resources/sass/list.scss ***!
+  \*************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/jwatkins/Vagrant/code/boosterthon.test/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Users/jwatkins/Vagrant/code/boosterthon.test/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /Users/jwatkins/Vagrant/code/boosterthon.test/resources/sass/default.scss */"./resources/sass/default.scss");
-module.exports = __webpack_require__(/*! /Users/jwatkins/Vagrant/code/boosterthon.test/resources/sass/home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! /Users/jwatkins/Vagrant/code/boosterthon.test/resources/sass/home.scss */"./resources/sass/home.scss");
+module.exports = __webpack_require__(/*! /Users/jwatkins/Vagrant/code/boosterthon.test/resources/sass/list.scss */"./resources/sass/list.scss");
 
 
 /***/ })
