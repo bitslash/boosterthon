@@ -13,7 +13,7 @@ class DBFundraiserRepository implements FundraiserRepositoryInterface
     /**
      * instantiate the object
      *
-     * @param Review
+     * @param Fundraiser
      */
     public function __construct(Model $model)
     {
