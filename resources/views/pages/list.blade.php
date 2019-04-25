@@ -20,7 +20,7 @@
                                 @endfor
                             </span>
                             <span class="date">
-                                {{ Carbon\Carbon::parse($review->date)->format('m/d/Y') }}
+                                {{ Carbon\Carbon::parse($review->created_at)->format('m/d/Y') }}
                             </span>
                             <span class="name">
                                 <a href="mailto:{{ $review->reviewer_email }}?subject={{ Config::get('options.email.review_subject') }}">{{ $review->reviewer_name }}</a>

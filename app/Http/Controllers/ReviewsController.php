@@ -4,9 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Repositories\ReviewRepositoryInterface;
 
 class ReviewsController extends Controller
 {
+    /**
+     * @var ReviewRepositoryInterface
+     */
+    protected $_review;
+
+    /**
+     * get the repository data model for review
+     *
+     * @param ReviewRepositoryInterface
+     */
+    public function __construct(ReviewRepositoryInterface $review)
+    {
+        $this->_review = $review;
+    }
+
     /**
      * retrieve the default view with review data
      *
@@ -14,11 +30,8 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        $reviews = DB::table('reviews')
-            ->select('fundraiser_id', 'fundraiser_name', DB::raw('AVG(rating) as average_rating'), DB::raw('COUNT(*) as num_rating'))
-            ->join('fundraisers', 'fundraisers.id', '=', 'reviews.fundraiser_id')
-            ->groupBy('fundraiser_id', 'fundraiser_name')
-            ->get();
+        $reviews = $this->_review->all();
+
         return view('pages/home', ['reviews' => $reviews]);
     }
 
@@ -50,10 +63,7 @@ class ReviewsController extends Controller
             $fundraiser_name = $fundraiser->first()->fundraiser_name;
         }
 
-        $reviews = DB::table('reviews')
-            ->select('rating', 'reviewer_name', 'reviewer_email', 'date')
-            ->where('fundraiser_id', '=', $fundraiser_id)
-            ->get();
-        return view('pages/list', ['reviews' => $reviews, 'fundraiser_name' => $fundraiser_name]);
+        $reviews = $this->_review->get($fundraiser_id);
+        return view('pages/list', ['fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
     }
 }
