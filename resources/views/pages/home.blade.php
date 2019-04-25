@@ -18,7 +18,7 @@
                                 <i class="fa fa-star-o"></i>
                             @endif
                         @endfor
-                        <p>{{ $review->reviewer_name }}</p>
+                        <p><a href="mailto:{{ $review->reviewer_email }}?subject={{ Config::get('options.email.review_subject') }}">{{ $review->reviewer_name }}</a></p>
                     </div>
                 </div>
             </div>
