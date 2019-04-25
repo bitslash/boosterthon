@@ -4,7 +4,7 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container">
+        <div id="app" class="container">
             @include('includes.navigation')
             @yield('content')
         </div>
