@@ -5,6 +5,7 @@ namespace App\Repositories;
 use Illuminate\Support\Facades\DB;
 use App\Repositories\FundraiserRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class DBFundraiserRepository implements FundraiserRepositoryInterface
 {
@@ -40,5 +41,17 @@ class DBFundraiserRepository implements FundraiserRepositoryInterface
         }
 
         return $fundraiser_name;
+    }
+
+    /**
+     * save a request
+     *
+     * @return int
+     */
+    public function save(Request $request)
+    {
+        $name = $request->fundraiser_name;
+        $fundraiser = $this->_model::firstOrCreate(['fundraiser_name' => $name]);
+        return $fundraiser->id;
     }
 }

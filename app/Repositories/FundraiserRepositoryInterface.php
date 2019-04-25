@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 interface FundraiserRepositoryInterface
 {
@@ -21,4 +22,11 @@ interface FundraiserRepositoryInterface
      * @return Results
      */
     public function getName(int $id);
+
+    /**
+     * save a request
+     *
+     * @return int
+     */
+    public function save(Request $request);
 }
