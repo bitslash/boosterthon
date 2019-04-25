@@ -12,13 +12,14 @@
                     </div>
                     <div class="panel-body">
                         @for ($i = 1; $i <= Config::get('options.ratings.star_count'); $i++)
-                            @if ($i <= $review->rating)
+                            @if ($review->average_rating >= $i)
                                 <i class="fa fa-star"></i>
+                            @elseif ($review->average_rating >= ($i - Config::get('options.ratings.half_star')))
+                                <i class="fa fa-star-half-o"></i>
                             @else
                                 <i class="fa fa-star-o"></i>
                             @endif
                         @endfor
-                        <p><a href="mailto:{{ $review->reviewer_email }}?subject={{ Config::get('options.email.review_subject') }}">{{ $review->reviewer_name }}</a></p>
                     </div>
                 </div>
             </div>
