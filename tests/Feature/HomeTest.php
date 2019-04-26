@@ -42,6 +42,6 @@ class HomeTest extends TestCase
     {
         $response = $this->get('/list/100');
 
-        $response->assertStatus(200);
+        $response->assertStatus(302);
     }
 }
