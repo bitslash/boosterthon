@@ -1,20 +1,21 @@
-.title {
+.row {
   margin-bottom: 30px;
 }
 
-div.reviews div.review {
-  padding-bottom: 15px;
+div.reviews span {
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
-div.reviews div.review span.rating {
+div.reviews span.rating {
   width: 105px;
 }
 
-div.reviews div.review span.date {
+div.reviews span.date {
   width: 165px;
 }
 
-div.reviews div.review span.name {
+div.reviews span.name {
   width: 200px;
 }
 
