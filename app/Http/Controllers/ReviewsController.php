@@ -75,7 +75,7 @@ class ReviewsController extends Controller
     {
         $fundraiser_name = $this->_fundraiser->getName($fundraiser_id);
         $reviews = $this->_review->get($fundraiser_id);
-        return view('pages/list', ['fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
+        return view('pages/list', ['fundraiser_id' => $fundraiser_id, 'fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
     }
 
     /**

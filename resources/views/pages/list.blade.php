@@ -3,7 +3,12 @@
     <link rel="stylesheet" href="{{ asset('css/list.css') }}">
 @stop
 @section('content')
-    <h1>{{ $fundraiser_name }}</h1>
+    <div class="row title">
+        <div class="col-12">
+            <h1>{{ $fundraiser_name }}</h1>
+            <a class="rate" href="{{ url('rate/' . $fundraiser_id) }}">Rate this Fundraiser</a>
+        </div>
+    </div>
     <div class="row reviews">
         @foreach ($reviews as $review)
             <div class="col-12">
