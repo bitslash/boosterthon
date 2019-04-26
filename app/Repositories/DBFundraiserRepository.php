@@ -54,4 +54,26 @@ class DBFundraiserRepository implements FundraiserRepositoryInterface
         $fundraiser = $this->_model::firstOrCreate(['fundraiser_name' => $name]);
         return $fundraiser->id;
     }
+
+    /**
+     * search for fundraisers
+     *
+     * @return array
+     */
+    public function search(Request $request)
+    {
+        $name = $request->input('search');
+
+        $results = $this->_model::select('fundraiser_name')
+            ->where('fundraiser_name', 'LIKE', "%$name%")
+            ->get();
+
+        $list = [];
+        foreach ($results as $row)
+        {
+            $list[] = $row['fundraiser_name'];
+        }
+
+        return $list;
+    }
 }

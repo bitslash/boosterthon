@@ -1,6 +1,11 @@
 @extends('layouts.default')
 @section('styles')
-    <link rel="stylesheet" href="css/rate.css">
+    <link rel="stylesheet" href="{{ asset('css/rate.css') }}">
+@stop
+@section('scripts')
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="{{ asset('js/search.js') }}"></script>
 @stop
 @section('content')
 <div class="row">
@@ -10,7 +15,7 @@
             <input type="hidden" name="rating" id="rating" />
             <div class="form-group">
                 <label for="fundraiser">Fundraiser Name</label>
-                <input type="text" class="form-control" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128">
+                <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}">
             </div>
             <div class="form-group">
                 <label for="rating">Your rating</label>

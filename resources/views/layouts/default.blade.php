@@ -8,7 +8,8 @@
             @include('includes.navigation')
             @yield('content')
         </div>
-        <script src="js/app.js" charset="utf-8"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>
 
