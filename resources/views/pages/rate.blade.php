@@ -22,7 +22,7 @@
     <div class="col-10 offset-1">
         <form method="post" action="{{ url('/rate') }}">
             @csrf
-            <input type="hidden" name="rating" id="rating" />
+            <input type="hidden" name="rating" id="rating" value="5">
             @isset($fundraiser_name)
                 <input type="hidden" name="fundraiser_name" id="fundraiser_name" value="{{ $fundraiser_name }}">
                 <h1>{{ $fundraiser_name }}</h1>
