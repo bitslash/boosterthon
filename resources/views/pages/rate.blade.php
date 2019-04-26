@@ -29,7 +29,7 @@
             @else
                 <div class="form-group">
                     <label for="fundraiser">Fundraiser name</label>
-                    <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}">
+                    <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}" value="{{ old('fundraiser_name') }}">
                 </div>
             @endisset
             <div class="form-group">
@@ -44,15 +44,15 @@
             </div>
             <div class="form-group">
                 <label for="name">Your name</label>
-                <input type="text" class="form-control" name="reviewer_name" id="reviewer_name" placeholder="First Last" required>
+                <input type="text" class="form-control" name="reviewer_name" id="reviewer_name" placeholder="First Last" required value="{{ old('reviewer_name') }}">
             </div>
             <div class="form-group">
                 <label for="email">Your email address</label>
-                <input type="email" class="form-control" name="reviewer_email" id="reviewer_email" placeholder="name@example.com" maxlength="320" required>
+                <input type="email" class="form-control" name="reviewer_email" id="reviewer_email" placeholder="name@example.com" maxlength="320" required value="{{ old('reviewer_email') }}">
             </div>
             <div class="form-group">
                 <label for="review">Your review</label>
-                <textarea class="form-control" id="review" name="review" placeholder="Optional review" maxlength="320"></textarea>
+                <textarea class="form-control" id="review" name="review" placeholder="Optional review" maxlength="320">{{ old('review') }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
