@@ -69,6 +69,8 @@ class ReviewsController extends Controller
     /**
      * list a fundraiser's ratings
      *
+     * @param int
+     *
      * @return Response
      */
     public function list(int $fundraiser_id)
@@ -80,6 +82,8 @@ class ReviewsController extends Controller
 
     /**
      * save a fundraiser's rating
+     *
+     * @param Request
      *
      * @return Response
      */
