@@ -50,7 +50,7 @@ class ReviewsController extends Controller
      */
     public function rate()
     {
-        return view('pages/rate', ['fundraiser_name' => '']);
+        return view('pages/rate');
     }
 
     /**

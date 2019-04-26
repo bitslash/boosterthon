@@ -14,10 +14,15 @@
         <form method="post" action="{{ url('/rate') }}">
             @csrf
             <input type="hidden" name="rating" id="rating" />
-            <div class="form-group">
-                <label for="fundraiser">Fundraiser Name</label>
-                <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}" value="{{ $fundraiser_name }}">
-            </div>
+            @isset($fundraiser_name)
+                <input type="hidden" name="fundraiser_name" id="fundraiser_name" value="{{ $fundraiser_name }}">
+                <h1>{{ $fundraiser_name }}</h1>
+            @else
+                <div class="form-group">
+                    <label for="fundraiser">Fundraiser Name</label>
+                    <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}">
+                </div>
+            @endisset
             <div class="form-group">
                 <label>Your rating</label>
                 <div id="fake_rating">
