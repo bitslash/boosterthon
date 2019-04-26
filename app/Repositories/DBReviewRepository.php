@@ -47,6 +47,7 @@ class DBReviewRepository implements ReviewRepositoryInterface
         $reviews = $this->_model::select('fundraiser_id', 'fundraiser_name', DB::raw('AVG(rating) as average_rating'), DB::raw('COUNT(*) as num_rating'))
             ->join('fundraisers', 'fundraisers.id', '=', 'reviews.fundraiser_id')
             ->groupBy('fundraiser_id', 'fundraiser_name')
+            ->orderBy(DB::raw('AVG(rating)'), 'desc')
             ->get();
 
         return $reviews;

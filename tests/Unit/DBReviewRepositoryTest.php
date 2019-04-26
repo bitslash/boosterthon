@@ -45,6 +45,7 @@ class TestDBReviewRepository extends TestCase
         $model->shouldReceive('select')->andReturn($model);
         $model->shouldReceive('join')->andReturn($model);
         $model->shouldReceive('groupBy')->andReturn($model);
+        $model->shouldReceive('orderBy')->andReturn($model);
         $model->shouldReceive('get')->andReturns($results);
 
         $repository = new \App\Repositories\DBReviewRepository($model);
