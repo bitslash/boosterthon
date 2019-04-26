@@ -6,7 +6,11 @@ i.fa-certificate {
   color: #d8bd29;
 }
 
-a.rate {
-  padding-left: 83px;
+div.certificate {
+  width: 85px;
+}
+
+div.fundraiser {
+  margin-left: 85px;
 }
 
