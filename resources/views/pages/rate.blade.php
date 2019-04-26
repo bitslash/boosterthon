@@ -15,7 +15,7 @@
             <input type="hidden" name="rating" id="rating" />
             <div class="form-group">
                 <label for="fundraiser">Fundraiser Name</label>
-                <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}">
+                <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}" value="{{ $fundraiser_name }}">
             </div>
             <div class="form-group">
                 <label for="rating">Your rating</label>

@@ -50,7 +50,20 @@ class ReviewsController extends Controller
      */
     public function rate()
     {
-        return view('pages/rate');
+        return view('pages/rate', ['fundraiser_name' => '']);
+    }
+
+    /**
+     * rate a specific fundraiser
+     *
+     * @param int
+     *
+     * @return Response
+     */
+    public function ratespecific(int $fundraiser_id)
+    {
+        $fundraiser_name = $this->_fundraiser->getName($fundraiser_id);
+        return view('pages/rate', ['fundraiser_name' => $fundraiser_name]);
     }
 
     /**

@@ -28,6 +28,8 @@
                                 ({{ $review->num_rating }} Reviews)
                             @endif
                         </a>
+                        <br />
+                        <a class="rate" href="{{ url('rate/' . $review->fundraiser_id) }}">Rate this Fundraiser</a>
                     </div>
                 </div>
             </div>

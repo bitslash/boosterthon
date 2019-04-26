@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'ReviewsController@index');
+Route::get('/rate/{id}', 'ReviewsController@ratespecific');
 Route::get('/rate', 'ReviewsController@rate');
 Route::post('/rate', 'ReviewsController@save');
 Route::get('/list/{id}', 'ReviewsController@list');
