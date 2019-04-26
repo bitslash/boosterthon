@@ -29,7 +29,11 @@
                 </span>
             </div>
             <div class="col-12 review">
-                {{ $review->review }}
+                @empty($review->review)
+                    No review left.
+                @else
+                    {{ $review->review }}
+                @endempty
             </div>
         @endforeach
     </div>
