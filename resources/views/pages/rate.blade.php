@@ -21,11 +21,11 @@
             <div class="form-group">
                 <label>Your rating</label>
                 <div id="fake_rating">
-                    <i class="fa fa-star-o fa-2x"></i>
-                    <i class="fa fa-star-o fa-2x"></i>
-                    <i class="fa fa-star-o fa-2x"></i>
-                    <i class="fa fa-star-o fa-2x"></i>
-                    <i class="fa fa-star-o fa-2x"></i>
+                    <i class="fa fa-star fa-2x"></i>
+                    <i class="fa fa-star fa-2x"></i>
+                    <i class="fa fa-star fa-2x"></i>
+                    <i class="fa fa-star fa-2x"></i>
+                    <i class="fa fa-star fa-2x"></i>
                 </div>
             </div>
             <div class="form-group">
