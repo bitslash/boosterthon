@@ -63,6 +63,12 @@ class ReviewsController extends Controller
     public function ratespecific(int $fundraiser_id)
     {
         $fundraiser_name = $this->_fundraiser->getName($fundraiser_id);
+
+        if (empty($fundraiser_name))
+        {
+            return redirect('/');
+        }
+
         return view('pages/rate', ['fundraiser_name' => $fundraiser_name]);
     }
 
@@ -77,6 +83,12 @@ class ReviewsController extends Controller
     {
         $fundraiser_name = $this->_fundraiser->getName($fundraiser_id);
         $reviews = $this->_review->get($fundraiser_id);
+
+        if (empty($fundraiser_name))
+        {
+            return redirect('/');
+        }
+
         return view('pages/list', ['fundraiser_id' => $fundraiser_id, 'fundraiser_name' => $fundraiser_name, 'reviews' => $reviews]);
     }
 
