@@ -60,7 +60,7 @@ class DBReviewRepository implements ReviewRepositoryInterface
     public function save(Request $request)
     {
         $request->validate([
-            'reviewer_email' => 'required',
+            'reviewer_email' => 'required|email',
             'reviewer_name' => 'required'
         ]);
         $review = $this->_model::create($request->all());
