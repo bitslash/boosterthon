@@ -51,7 +51,7 @@
                 <input type="email" class="form-control" name="reviewer_email" id="reviewer_email" placeholder="name@example.com" maxlength="320" required>
             </div>
             <div class="form-group">
-                <label for="review">Review</label>
+                <label for="review">Your review</label>
                 <textarea class="form-control" id="review" name="review" placeholder="Optional review" maxlength="320"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
