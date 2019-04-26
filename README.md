@@ -5,7 +5,7 @@ This was the first time I've ever used Laravel, so there was quite a learning cu
 ## Notes
 * This was my first time developing in Laravel, overall I really enjoyed the experience. Please bare with me!
 * I developed on my Mac using Vagrant inside of VirtualBox using Homestead and coded the project using Vim.
-* I hosted the site on my personal ESXI server on top of CentOS 7 in a dedicated VLAN. (Sorry if it's slow.)
+* I hosted the site on my personal ESXI server on top of CentOS 7 in a dedicated VLAN using a web balancer and an LE certificate. (Sorry if it's slow.)
 * It's using a MariaDB MySQL backend, there were some manual changes to Nginx to serve FontAwesome mime-types.
 * There's a lookup for existing fundraisers via an autocomplete utilizing AJAX and JSON.
 * I used compiled SASS, though there wasn't much logic to it.
@@ -16,6 +16,6 @@ This was the first time I've ever used Laravel, so there was quite a learning cu
 * I implemented a repository design pattern in order to keep the logic out of the controllers and for easier unit testing. Again, probably overkill for such a simple site.
 * I extended the native Eloquent models for data retrieval.
 
-You can view the site here: [https://bitslash.com](https://bitslash.com)
+You can view the site here: [https://booster.jamley.com](https://booster.jamley.com)
 
 Thanks again for the opportunity and your patience! I hope this shows how dedicated I am to this prospect.
