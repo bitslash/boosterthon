@@ -3,6 +3,7 @@
 This was the first time I've ever used Laravel, so there was quite a learning curve. However, I hope this shows how dedicated I am to this prospect. Thank you for taking the time to review it.
 
 ## Notes
+* This was my first time developing in Laravel, overall I really enjoyed the experience. Please bare with me!
 * I developed on my Mac using Vagrant inside of VirtualBox using Homestead and coded the project using Vim.
 * I hosted the site on my personal ESXI server on top of CentOS 7 in a dedicated VLAN. (Sorry if it's slow.)
 * It's using a MariaDB MySQL backend, there were some manual changes to Nginx to serve FontAwesome mime-types.
