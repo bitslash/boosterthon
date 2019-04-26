@@ -28,7 +28,7 @@
                 <h1>{{ $fundraiser_name }}</h1>
             @else
                 <div class="form-group">
-                    <label for="fundraiser">Fundraiser Name</label>
+                    <label for="fundraiser">Fundraiser name</label>
                     <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}">
                 </div>
             @endisset
