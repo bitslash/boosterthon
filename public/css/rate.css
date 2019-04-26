@@ -2,3 +2,7 @@ i {
   cursor: pointer;
 }
 
+.alert ul {
+  margin-bottom: 0;
+}
+
