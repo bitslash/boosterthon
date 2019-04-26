@@ -4,8 +4,11 @@ h1 {
 div.reviews {
     div.review {
         padding-bottom: 15px;
-        span.rating, span.date {
-            width: 100px;
+        span.rating {
+            width: 105px;
+        }
+        span.date {
+            width: 165px;
         }
         span.name {
             width: 200px;

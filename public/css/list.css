@@ -6,9 +6,12 @@ div.reviews div.review {
   padding-bottom: 15px;
 }
 
-div.reviews div.review span.rating,
+div.reviews div.review span.rating {
+  width: 105px;
+}
+
 div.reviews div.review span.date {
-  width: 100px;
+  width: 165px;
 }
 
 div.reviews div.review span.name {
