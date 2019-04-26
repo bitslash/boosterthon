@@ -62,6 +62,7 @@ class DBReviewRepository implements ReviewRepositoryInterface
     public function save(Request $request)
     {
         $request->validate([
+            'fundraiser_name' => 'required',
             'reviewer_email' => [
                 'required',
                 'email',
