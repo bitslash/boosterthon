@@ -4,5 +4,7 @@
     "/css/default.css": "/css/default.css",
     "/css/home.css": "/css/home.css",
     "/css/list.css": "/css/list.css",
+    "/css/rate.css": "/css/rate.css",
+    "/js/rate.js": "/js/rate.js",
     "/js/search.js": "/js/search.js"
 }

@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
     <script src="{{ asset('js/search.js') }}"></script>
+    <script src="{{ asset('js/rate.js') }}"></script>
 @stop
 @section('content')
 <div class="row">
@@ -18,8 +19,8 @@
                 <input type="text" class="form-control typeahead" name="fundraiser_name" id="fundraiser_name" placeholder="Name of fundraiser" maxlength="128" autocomplete="off" data-provide="typeahead" data-url="{{ url('autocomplete') }}" value="{{ $fundraiser_name }}">
             </div>
             <div class="form-group">
-                <label for="rating">Your rating</label>
-                <div>
+                <label>Your rating</label>
+                <div id="fake_rating">
                     <i class="fa fa-star-o fa-2x"></i>
                     <i class="fa fa-star-o fa-2x"></i>
                     <i class="fa fa-star-o fa-2x"></i>

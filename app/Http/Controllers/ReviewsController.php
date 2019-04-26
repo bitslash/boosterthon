@@ -87,8 +87,7 @@ class ReviewsController extends Controller
     {
         $id = $this->_fundraiser->save($request);
 
-        // temporary until we can autopopulate the rating
-        $request->merge(['fundraiser_id' => $id, 'rating' => '5']);
+        $request->merge(['fundraiser_id' => $id]);
 
         $this->_review->save($request);
         return redirect('list/' . $id);
