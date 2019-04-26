@@ -20,7 +20,7 @@
                             <i class="fa fa-star-o"></i>
                         @endif
                     @endfor
-                    <a href="{{ url('/list/' . $review->fundraiser_id) }}">
+                    <a class="reviews" href="{{ url('/list/' . $review->fundraiser_id) }}">
                         @if ($review->num_rating == 1)
                             ({{ $review->num_rating }} Review)
                         @else
