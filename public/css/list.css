@@ -4,6 +4,9 @@
 
 div.reviews span {
   display: inline-block;
+}
+
+div.reviews .review {
   margin-bottom: 15px;
 }
 

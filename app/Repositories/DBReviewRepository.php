@@ -30,7 +30,7 @@ class DBReviewRepository implements ReviewRepositoryInterface
      */
     public function get($id)
     {
-        $reviews = $this->_model::select('rating', 'reviewer_name', 'reviewer_email', 'created_at')
+        $reviews = $this->_model::select('rating', 'reviewer_name', 'reviewer_email', 'created_at', 'review')
             ->where('fundraiser_id', '=', $id)
             ->get();
 

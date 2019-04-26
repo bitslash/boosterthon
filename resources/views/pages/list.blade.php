@@ -11,7 +11,7 @@
     </div>
     <div class="row reviews">
         @foreach ($reviews as $review)
-            <div class="col-12">
+            <div class="col-12 identity">
                 <span class="rating">
                     @for ($i = 1; $i <= Config::get('options.ratings.star_count'); $i++)
                         @if ($review->rating >= $i)
@@ -27,6 +27,9 @@
                 <span class="name">
                     <a href="mailto:{{ $review->reviewer_email }}?subject={{ Config::get('options.email.review_subject') }}">{{ $review->reviewer_name }}</a>
                 </span>
+            </div>
+            <div class="col-12 review">
+                {{ $review->review }}
             </div>
         @endforeach
     </div>
