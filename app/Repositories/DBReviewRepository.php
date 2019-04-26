@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Repositories\ReviewRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class DBReviewRepository implements ReviewRepositoryInterface
 {
@@ -61,7 +62,13 @@ class DBReviewRepository implements ReviewRepositoryInterface
     public function save(Request $request)
     {
         $request->validate([
-            'reviewer_email' => 'required|email',
+            'reviewer_email' => [
+                'required',
+                'email',
+                Rule::unique('reviews')->where(function($query) use($request) {
+                    return $query->where('fundraiser_id', $request->fundraiser_id);
+                })
+            ],
             'reviewer_name' => 'required'
         ]);
         $review = $this->_model::create($request->all());
