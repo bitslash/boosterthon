@@ -44,11 +44,11 @@
             </div>
             <div class="form-group">
                 <label for="name">Your name</label>
-                <input type="text" class="form-control" name="reviewer_name" id="reviewer_name" placeholder="First Last">
+                <input type="text" class="form-control" name="reviewer_name" id="reviewer_name" placeholder="First Last" required>
             </div>
             <div class="form-group">
                 <label for="email">Your email address</label>
-                <input type="email" class="form-control" name="reviewer_email" id="reviewer_email" placeholder="name@example.com" maxlength="320">
+                <input type="email" class="form-control" name="reviewer_email" id="reviewer_email" placeholder="name@example.com" maxlength="320" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
