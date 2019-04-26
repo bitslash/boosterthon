@@ -1,4 +1,8 @@
-div.col-4 {
-  margin-bottom: 75px;
+div.row {
+  margin-bottom: 50px;
+}
+
+i.fa-certificate {
+  color: #d8bd29;
 }
 

@@ -3,11 +3,12 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @stop
 @section('content')
-    <div class="row">
-        @foreach ($reviews as $review)
-            <div class="col-4">
+    @foreach ($reviews as $review)
+        <div class="row">
+            <div class="col-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        <i class="fa fa-certificate fa-5x pull-left"></i>
                         <h1>{{ $review->fundraiser_name }}</h1>
                     </div>
                     <div class="panel-body">
@@ -30,7 +31,7 @@
                     </div>
                 </div>
             </div>
-        @endforeach
-    </div>
+        </div>
+    @endforeach
 @stop
 
